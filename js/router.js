@@ -16,6 +16,18 @@ function router() {
     loadPage(filePath, pageName);
 
     updateMenuState(); 
+
+    waitForHeaderAndUpdate();
+}
+
+function waitForHeaderAndUpdate() {
+    const navLinks = document.querySelectorAll('header .nav .nav-link');
+    
+    if (navLinks.length > 0) {
+        updateMenuState();
+    } else {
+        setTimeout(waitForHeaderAndUpdate, 50);
+    }
 }
 
 function updateMenuState() {
@@ -32,6 +44,7 @@ function updateMenuState() {
     });
 }
 
+// Fonction de chargement du contenu
 function loadPage(url, pageNameForError) {
     const mainContent = document.querySelector('main');
     
