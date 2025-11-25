@@ -38,6 +38,18 @@
     border: 5px solid #fff;
 }
 
+.profile-image svg {
+    width: 350px;
+    height: 350px;
+    
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 5px solid #fff;
+    
+    display: block;
+    object-fit: cover;
+}
+
 .profile-text {
     flex: 1;
 }
@@ -135,7 +147,7 @@
 }
 
 /* --- RESPONSIVE ABOUT --- */
-@media (max-width: 768px) {
+@media (max-width: 1002px) {
     .profile-container {
         flex-direction: column;
         text-align: center;
@@ -143,6 +155,11 @@
     }
 
     .profile-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-image svg {
         width: 250px;
         height: 250px;
     }

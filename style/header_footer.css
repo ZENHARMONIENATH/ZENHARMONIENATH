@@ -56,6 +56,32 @@ header .nav .nav-link[href="#contact"].active {
 }
 
 /* =========================================
+   LOGO HEADER
+   ========================================= */
+
+/* --- STYLE DES LOGOS/TITRES --- */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1abc9c;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+    position: absolute;
+    left: 40px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-mobile {
+    display: none;
+}
+.logo-pc {
+    display: block;
+}
+
+/* =========================================
    2. BOUTON BURGER (Caché sur PC)
    ========================================= */
 
@@ -150,7 +176,23 @@ header .nav .nav-link[href="#contact"].active {
    4. RESPONSIVE HEADER (MOBILE & TABLETTE)
    ========================================= */
 
-@media (max-width: 1002px) { 
+@media (max-width: 1002px) {
+
+    .logo-pc {
+        display: none;
+    }
+    
+    .logo-mobile {
+        display: block;
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 0 auto; 
+    }
+
+    #navMenu .nav-link.active {
+        display: none;
+    }
     
     header {
         padding: 15px 20px;
@@ -227,5 +269,11 @@ header .nav .nav-link[href="#contact"].active {
     header .nav .nav-link[href="#contact"]:hover {
         background-color: transparent !important;
         color: #1abc9c !important;
+    }
+}
+
+@media (max-width: 1439px) {
+    .logo-pc {
+        display: none;
     }
 }
