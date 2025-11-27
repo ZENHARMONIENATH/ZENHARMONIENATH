@@ -282,3 +282,35 @@ header .nav .nav-link[href="#home"].active {
         display: none;
     }
 }
+
+@media (min-width: 1003px) {
+    /* L'ordre visuel sur PC (Accueil est le 1er dans le HTML) :
+       1. À propos
+       2. Magnétisme
+       3. Hypnose
+       4. Accueil (On veut qu'il soit ici)
+       5. Litho
+       6. Lahochi
+       7. Contact
+    */
+
+    #navMenu .nav-item:nth-child(1) { order: 4; }
+
+    /* À propos (C'est le 2ème li du HTML) -> On le met en position 1 */
+    #navMenu .nav-item:nth-child(2) { order: 1; }
+
+    /* Magnétisme (3ème li) -> Position 2 */
+    #navMenu .nav-item:nth-child(3) { order: 2; }
+
+    /* Hypnose (4ème li) -> Position 3 */
+    #navMenu .nav-item:nth-child(4) { order: 3; }
+
+    /* Lithothérapie (5ème li) -> Position 5 (reste à sa place logique) */
+    #navMenu .nav-item:nth-child(5) { order: 5; }
+
+    /* Lahochi (6ème li) -> Position 6 */
+    #navMenu .nav-item:nth-child(6) { order: 6; }
+
+    /* Contact (7ème li) -> Position 7 */
+    #navMenu .nav-item:nth-child(7) { order: 7; }
+}
