@@ -34,14 +34,20 @@ function updateMenuState() {
     const currentHash = window.location.hash || '#' + CONFIG.defaultPage;
 
     const navLinks = document.querySelectorAll('header .nav .nav-link');
+    const mobileTitle = document.getElementById('mobileTitle');
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-
-        if (link.getAttribute('href') === currentHash) {
-            link.classList.add('active');
-        }
     });
+    const activeLink = document.querySelector(`header .nav .nav-link[href="${currentHash}"]`);
+
+    if (activeLink) {
+        activeLink.classList.add('active');
+
+        if (mobileTitle) {
+            mobileTitle.innerText = activeLink.innerText;
+        }
+    }
 }
 
 // Fonction de chargement du contenu
