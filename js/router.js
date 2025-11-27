@@ -81,7 +81,7 @@ function loadPage(url, pageNameForError) {
                 <div style="text-align:center; padding:80px 20px;">
                     <h1 style="color:#e74c3c;">Oups !</h1>
                     <p>La page <strong>${displayName}</strong> est introuvable.</p>
-                    <a href="#home" style="color:#1abc9c; text-decoration:none; border-bottom:1px solid #1abc9c;">Retour à l'accueil</a>
+                    <a href="#home" style="color:#D63085; text-decoration:none; border-bottom:1px solid #D63085;">Retour à l'accueil</a>
                 </div>
             `;
             mainContent.style.opacity = '1';

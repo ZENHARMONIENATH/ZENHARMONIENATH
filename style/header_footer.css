@@ -29,29 +29,29 @@ header .nav .nav-link {
 }
 
 header .nav .nav-link:hover {
-    color: #1abc9c !important;
-    background-color: rgba(26, 188, 156, 0.1);
+    color: #D63085 !important;
+    background-color: rgba(214, 48, 133, 0.1);
 }
 
 header .nav .nav-link.active {
-    background-color: #1abc9c !important;
+    background-color: #D63085 !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.2);
-    border-color: #1abc9c;
+    box-shadow: 0 4px 15px rgba(214, 48, 133, 0.3);
+    border-color: #D63085;
 }
 
-header .nav .nav-link[href="#contact"] {
-    border: 1px solid #1abc9c;
-    color: #1abc9c !important;
+header .nav .nav-link[href="#home"] {
+    border: 1px solid #D63085;
+    color: #D63085 !important;
 }
 
-header .nav .nav-link[href="#contact"]:hover {
-    background-color: #1abc9c !important;
+header .nav .nav-link[href="#home"]:hover {
+    background-color: #D63085 !important;
     color: white !important;
 }
 
-header .nav .nav-link[href="#contact"].active {
-    background-color: #1abc9c !important;
+header .nav .nav-link[href="#home"].active {
+    background-color: #D63085 !important;
     color: white !important;
 }
 
@@ -63,8 +63,7 @@ header .nav .nav-link[href="#contact"].active {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1abc9c;
-    text-transform: uppercase;
+    color: #D63085;
     text-decoration: none;
     letter-spacing: 2px;
     
@@ -72,6 +71,12 @@ header .nav .nav-link[href="#contact"].active {
     left: 40px; 
     top: 50%;
     transform: translateY(-50%);
+}
+
+.logo img {
+    height: 85px;
+    width: auto;
+    display: block;
 }
 
 .logo-mobile {
@@ -127,7 +132,7 @@ header .nav .nav-link[href="#contact"].active {
 
 .footer-group h3 {
     font-size: 1.1rem;
-    color: #1abc9c;
+    color: #D63085;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -145,13 +150,13 @@ header .nav .nav-link[href="#contact"].active {
 
 .footer-nav-primary a:hover,
 .footer-nav-soins a:hover {
-    color: #1abc9c;
+    color: #D63085;
 }
 
 .footer hr {
     border: 0;
     height: 1px;
-    background: #1abc9c;
+    background: #D63085;
     opacity: 0.3;
     width: 100%;
     max-width: 1000px;
@@ -251,7 +256,7 @@ header .nav .nav-link[href="#contact"].active {
 
     header .nav .nav-link.active {
         background-color: transparent !important;
-        color: #1abc9c !important;
+        color: #D63085 !important;
         font-weight: bold;
         border-bottom: 1px solid #f0f0f0;
     }
@@ -260,15 +265,15 @@ header .nav .nav-link[href="#contact"].active {
         border-bottom: none;
     }
 
-    header .nav .nav-link[href="#contact"] {
+    header .nav .nav-link[href="#home"] {
         border: none;
         color: #555 !important;
         border-bottom: none;
     }
 
-    header .nav .nav-link[href="#contact"]:hover {
+    header .nav .nav-link[href="#home"]:hover {
         background-color: transparent !important;
-        color: #1abc9c !important;
+        color: #D63085 !important;
     }
 }
 
