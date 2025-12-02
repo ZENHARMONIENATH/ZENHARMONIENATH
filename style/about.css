@@ -1,176 +1,151 @@
-/* --- PAGE À PROPOS --- */
-.about-hero {
+/* =========================================
+   1. HEADER DE PAGE
+   ========================================= */
+.page-header {
     text-align: center;
-    margin-bottom: 60px;
+    padding: 60px 20px 40px;
+    background-color: #fff;
 }
 
-.about-hero h1 {
-    color: #333;
+.page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.about-hero .subtitle {
-    color: #DE1B77;
+.page-header .subtitle {
     font-size: 1.2rem;
+    color: #777;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.about-profile {
-    background-color: #fff;
-    margin-bottom: 80px;
-}
-
+/* =========================================
+   2. SECTION PROFIL
+   ========================================= */
 .profile-container {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.profile-image {
+.profile-image-wrapper {
     position: relative;
     width: 350px;
     height: 350px;
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 5px solid #fff;
-    background-color: #f4f4f4;
+    border-radius: 20px;
     overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 20px 20px 0px rgba(214, 48, 133, 0.1);
+    background-color: #fff;
 }
 
-.profile-image svg {
+/* =========================================
+   Profile - Image / SVG
+   ========================================= */
+.placeholder-svg,
+.shadow-img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+.placeholder-svg {
     z-index: 1;
-    object-fit: cover;
+    transform: scale(1.02);
 }
 
-.profile-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.shadow-img {
     z-index: 2;
     object-fit: cover;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
+    background-color: #fff;
 }
 
 .profile-text {
-    flex: 1;
-}
-
-.profile-text h2 {
-    color: #333;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.profile-text h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #DE1B77;
-    margin-top: 5px;
+    flex: 1.5;
 }
 
 .profile-text p {
     line-height: 1.8;
-    color: #666;
+    color: #555;
     margin-bottom: 20px;
+    font-size: 1.05rem;
 }
 
-.btn-primary {
-    display: inline-block;
-    background-color: #DE1B77;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    margin-top: 10px;
+/* =========================================
+   3. SECTION VALEURS
+   ========================================= */
+.bg-light {
+    background-color: #f9f9f9;
 }
 
-.btn-primary:hover {
-    background-color: #ad155e;
-    transform: translateY(-2px);
-}
-
-.about-values {
+.container-center {
     text-align: center;
-    margin-bottom: 40px;
-}
-
-.about-values h2 {
-    color: #333;
-    margin-bottom: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    margin-top: 50px;
 }
 
 .value-card {
-    background: #f9f9f9;
-    padding: 30px;
+    background: white;
+    padding: 40px 30px;
     border-radius: 15px;
-    transition: transform 0.3s;
-    border-top: 3px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    text-align: center;
 }
 
 .value-card:hover {
-    transform: translateY(-5px);
-    background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 3px solid #DE1B77;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    border-color: #D63085;
 }
 
 .value-card .icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .value-card h3 {
-    color: #DE1B77;
-    margin-bottom: 10px;
+    color: #D63085;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
 .value-card p {
-    font-size: 0.95rem;
-    color: #777;
+    color: #666;
     line-height: 1.6;
 }
 
-.value-card h3 a {
-    text-decoration: none;
-    color: #DE1B77;
-    transition: color 0.3s;
-}
-
-/* --- RESPONSIVE ABOUT --- */
-@media (max-width: 1002px) {
+/* =========================================
+    4. RESPONSIVE
+    ========================================= */
+@media (max-width: 900px) {
     .profile-container {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
+        padding: 0 20px;
     }
 
-    .profile-image {
-        width: 250px;
-        height: 250px;
+    .profile-image-wrapper {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 30px;
     }
 
-    .profile-text h2::after {
-        margin: 5px auto 0 auto;
+    .page-header h1 {
+        font-size: 2rem;
     }
 }

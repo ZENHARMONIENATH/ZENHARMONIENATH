@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (fileName.includes('header')) {
                     initBurgerMenu();
+                    document.dispatchEvent(new Event('menuReady'));
                 }
             })
             .catch(err => console.error(`Erreur lors du chargement de ${file} :`, err));

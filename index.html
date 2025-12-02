@@ -3,26 +3,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZenHarmonie</title>
+    <title>Zen Harmonie Nath</title>
 
-    <link rel="icon" type="images/vnd.icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/header_footer.css">
-    <link rel="stylesheet" href="style/about.css">
 
-    <script src="js/main.js"></script>
-    <script src="js/header_footer.js"></script>
-    <script src="js/router.js"></script>
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
+    <script src="js/header_footer.js" defer></script>
+    <script src="js/router.js" defer></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="page-loader" class="loader-container">
+        <div class="spinner"></div>
+    </div>
     <!-- Conteneur pour l'en-tête -->
     <div data-include="header"></div>
             
     <main>
-        <h1>Ceci est un placeholder</h1>
+        <div style="text-align: center; padding-top: 50px; opacity: 0.5;">Chargement...</div>
     </main>
 
     <!-- Conteneur pour le pied de page -->

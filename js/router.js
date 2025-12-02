@@ -11,22 +11,23 @@ function router() {
         pageName = CONFIG.defaultPage;
     }
 
+    loadPageCSS(pageName);
+
+    const mainElement = document.querySelector('main');
+    if (pageName === 'home') {
+        mainElement.classList.add('full-width');
+    } else {
+        mainElement.classList.remove('full-width');
+    }
+
     const filePath = CONFIG.folder + pageName + CONFIG.extension;
 
-    loadPage(filePath, pageName);
+    loadPageHTML(filePath, pageName);
 
-    updateMenuState(); 
-
-    waitForHeaderAndUpdate();
-}
-
-function waitForHeaderAndUpdate() {
-    const navLinks = document.querySelectorAll('header .nav .nav-link');
-    
-    if (navLinks.length > 0) {
-        updateMenuState();
+    if (document.querySelector('header .nav')) {
+    updateMenuState();
     } else {
-        setTimeout(waitForHeaderAndUpdate, 50);
+        document.addEventListener('menuReady', updateMenuState); 
     }
 }
 
@@ -50,11 +51,40 @@ function updateMenuState() {
     }
 }
 
-// Fonction de chargement du contenu
-function loadPage(url, pageNameForError) {
-    const mainContent = document.querySelector('main');
+//Fonction de chargement du CSS du contenu
+function loadPageCSS(pageName) {
+    const head = document.getElementsByTagName('head')[0];
+    const newCssPath = `style/${pageName}.css`;
+    const existingCssId = 'page-specific-css';
     
-    mainContent.style.opacity = '0.3';
+    const oldLink = document.getElementById(existingCssId);
+    if (oldLink) {
+        oldLink.remove();
+    }
+    
+    fetch(newCssPath, { method: 'HEAD' })
+        .then(response => {
+            if (response.ok) {
+                const newLink = document.createElement('link');
+                newLink.rel = 'stylesheet';
+                newLink.type = 'text/css';
+                newLink.href = newCssPath;
+                newLink.id = existingCssId;
+                
+                head.appendChild(newLink);
+            }
+        })
+        .catch(error => {
+        });
+}
+
+// Fonction de chargement du contenu
+function loadPageHTML(url, pageNameForError) {
+    const mainContent = document.querySelector('main');
+    const loader = document.getElementById('page-loader');
+    
+    if (loader) loader.classList.add('active');
+    mainContent.style.opacity = '0';
 
     fetch(url)
         .then(response => {
@@ -63,18 +93,23 @@ function loadPage(url, pageNameForError) {
         })
         .then(html => {
             mainContent.innerHTML = html;
-            
             window.scrollTo(0, 0);
 
             setTimeout(() => {
                 mainContent.style.opacity = '1';
+                
+                if (loader) loader.classList.remove('active');
+                
                 if (typeof initScrollAnimations === "function") {
                     initScrollAnimations();
                 }
-            }, 50);
+            }, 300);
         })
         .catch(error => {
             console.error("Erreur chargement:", error);
+            
+            if (loader) loader.classList.remove('active'); 
+            
             let displayName = pageNameForError ? pageNameForError.charAt(0).toUpperCase() + pageNameForError.slice(1) : "Inconnue";
 
             mainContent.innerHTML = `
