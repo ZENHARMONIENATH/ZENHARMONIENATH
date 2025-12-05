@@ -267,6 +267,24 @@ ul.social-icons {
     );
 }
 
+/* ========================================= 
+   4. AVERTISSEMENT MÉDICAL
+   ========================================= */
+.medical-warning {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    max-width: 800px;
+    margin: 20px auto 10px auto;
+    padding: 0 20px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.medical-warning strong {
+    color: #D63085;
+}
+
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -275,7 +293,7 @@ ul.social-icons {
 }
 
 /* =========================================
-   4. RESPONSIVE HEADER (MOBILE & TABLETTE)
+   5. RESPONSIVE HEADER (MOBILE & TABLETTE)
    ========================================= */
 
 @media (max-width: 1026px) {
