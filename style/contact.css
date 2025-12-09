@@ -1,0 +1,122 @@
+/* --- HEADER SPECIFIQUE --- */
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contact-header h1 { font-size: 2.5rem; color: #333; margin-bottom: 10px; }
+.contact-header .lead { color: #666; font-size: 1.1rem; }
+
+/* --- CONTENEUR PRINCIPAL --- */
+.contact-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+/* --- COLONNE INFOS --- */
+.contact-info h2 { font-size: 1.5rem; color: #D63085; margin-bottom: 25px; }
+
+.info-item { margin-bottom: 20px; }
+.info-item strong { display: block; color: #333; margin-bottom: 5px; }
+.info-item p, .info-item a { color: #666; text-decoration: none; font-size: 1.05rem; }
+.info-item a:hover { color: #D63085; }
+
+/* Carte Google Maps */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 25px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Horaires */
+.hours-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #D63085;
+}
+.hours-box h3 { font-size: 1.1rem; margin-bottom: 5px; color: #333; }
+.hours-box p { margin: 0; color: #555; }
+
+/* Bouton WhatsApp */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+.btn-whatsapp .icon { margin-right: 8px; font-size: 1.2rem; }
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+/* --- COLONNE FORMULAIRE --- */
+.contact-form-wrapper h2 { font-size: 1.5rem; color: #D63085; margin-bottom: 25px; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background-color: #fcfcfc;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+/* Focus rose "Zen Harmonie" */
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: #D63085;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(214, 48, 133, 0.1);
+}
+
+.full-width { width: 100%; text-align: center; }
+.form-note { font-size: 0.85rem; color: #999; margin-top: 15px; text-align: center; font-style: italic;}
+
+/* --- DISCLAIMER CONTACT --- */
+.form-disclaimer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-container { padding: 25px; }
+    .contact-header h1 { font-size: 2rem; }
+}

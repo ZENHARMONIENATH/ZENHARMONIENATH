@@ -68,13 +68,19 @@ function updateMenuState() {
 //Fonction de chargement du CSS du contenu
 function loadPageCSS(pageName) {
     const head = document.getElementsByTagName('head')[0];
-    const newCssPath = `style/${pageName}.css`;
     const existingCssId = 'page-specific-css';
     
     const oldLink = document.getElementById(existingCssId);
     if (oldLink) {
         oldLink.remove();
     }
+    
+    const pagesToLoad = ['home', 'about', 'contact'];
+    if (!pagesToLoad.includes(pageName)) {
+        return;
+    }
+    
+    const newCssPath = `style/${pageName}.css`;
     
     fetch(newCssPath, { method: 'HEAD' })
         .then(response => {
