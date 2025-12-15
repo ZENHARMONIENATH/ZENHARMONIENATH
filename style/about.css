@@ -1,5 +1,5 @@
 /* =========================================
-   1. HEADER DE PAGE
+   1. EN-TÊTE DE PAGE
    ========================================= */
 .page-header {
     text-align: center;
@@ -43,7 +43,7 @@
 }
 
 /* =========================================
-   Profile - Image / SVG
+   Profil - Image / SVG
    ========================================= */
 .placeholder-svg,
 .shadow-img {

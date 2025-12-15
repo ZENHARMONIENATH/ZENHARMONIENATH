@@ -65,7 +65,7 @@ function updateMenuState() {
     });
 }
 
-//Fonction de chargement du CSS du contenu
+// Fonction de chargement du CSS du contenu
 function loadPageCSS(pageName) {
     const head = document.getElementsByTagName('head')[0];
     const existingCssId = 'page-specific-css';
@@ -98,7 +98,7 @@ function loadPageCSS(pageName) {
         });
 }
 
-// Fonction de chargement du contenu
+// Fonction de chargement du contenu HTML
 function loadPageHTML(url, pageNameForError) {
     const mainContent = document.querySelector('main');
     const loader = document.getElementById('page-loader');

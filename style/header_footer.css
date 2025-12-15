@@ -1,5 +1,5 @@
 /* =========================================
-   VARIABLES & COLORS
+   VARIABLES ET COULEURS
    ========================================= */
 :root {
     --primary-color: #D63085;
@@ -15,7 +15,7 @@
 }
 
 /* =========================================
-   1. HEADER & LOGO
+   1. EN-TÊTE ET LOGO
    ========================================= */
 
 header {
@@ -69,7 +69,7 @@ header {
 }
 
 /* =========================================
-   1. HEADER & NAVIGATION (DESKTOP)
+   1. EN-TÊTE ET NAVIGATION (BUREAU)
    ========================================= */
 
 header {
@@ -126,7 +126,7 @@ header .nav .nav-link[href="#home"].active {
 }
 
 /* =========================================
-   3. DROPDOWN MENU
+   3. MENU DÉROULANT
    ========================================= */
 
 .dropdown-menu {
@@ -191,7 +191,7 @@ header .nav .nav-link[href="#home"].active {
 }
 
 /* =========================================
-   4. BURGER MENU
+   4. MENU BURGER
    ========================================= */
 
 .burger {
@@ -223,7 +223,7 @@ header .nav .nav-link[href="#home"].active {
 }
 
 /* =========================================
-   5. FOOTER
+   5. PIED DE PAGE
    ========================================= */
 
 .footer {
@@ -298,7 +298,7 @@ header .nav .nav-link[href="#home"].active {
 }
 
 /* =========================================
-   6. SOCIAL ICONS
+   6. ICÔNES RÉSEAUX SOCIAUX
    ========================================= */
 
 ul.social-icons {
@@ -399,7 +399,7 @@ ul.social-icons {
 .social-icons .icon-content a[data-social="pagesjaunes"] ~ .tooltip { color: #000; }
 
 /* =========================================
-   7. MEDICAL WARNING
+   7. AVERTISSEMENT MÉDICAL
    ========================================= */
 
 .medical-warning {
@@ -419,20 +419,20 @@ ul.social-icons {
 }
 
 /* =========================================
-   8. RESPONSIVE - MOBILE & TABLET (900px max)
+   8. RESPONSIVE - MOBILE ET TABLETTE (910px max)
    ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 910px) {
     .logo-pc {
         display: none;
     }
 }
 
 /* =========================================
-   9. RESPONSIVE - TABLET/PC (655px+)
+   9. RESPONSIVE - TABLETTE/BUREAU (769px+)
    ========================================= */
 
-@media (min-width: 655px) {
+@media (min-width: 769px) {
     #navMenu .nav-item.d-md-none {
         display: none !important;
     }
@@ -448,10 +448,10 @@ ul.social-icons {
 }
 
 /* =========================================
-   10. RESPONSIVE - MOBILE & TABLET (654px max)
+   10. RESPONSIVE - MOBILE ET TABLETTE (768px max)
    ========================================= */
 
-@media (max-width: 654px) {
+@media (max-width: 768px) {
     .logo-mobile {
         display: block;
         position: static;

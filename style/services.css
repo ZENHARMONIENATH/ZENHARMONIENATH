@@ -1,4 +1,4 @@
-/* Service Pages Styles */
+/* Styles des pages de services */
 
 .services-page {
 	flex: 1;
@@ -165,7 +165,7 @@
 	box-shadow: 0 4px 12px rgba(214, 48, 133, 0.15);
 }
 
-/* Responsive Design */
+/* Design réactif */
 @media (max-width: 800px) {
 	.service-hero {
 		padding: 40px 15px;
